@@ -1,0 +1,40 @@
+name: philo
+description: "식물 관리 서비스 모바일 어플리케이션"
+publish_to: 'none' # Remove this line if you wish to publish to pub.dev
+
+version: 1.0.0+1
+
+environment:
+  sdk: '>=3.2.0 <4.0.0'
+dependencies:
+  flutter:
+    sdk: flutter
+  cupertino_icons: ^1.0.2
+  drift: ^2.13.2
+  sqlite3_flutter_libs: ^0.5.18
+  freezed_annotation: ^2.4.1
+  build_runner: ^2.4.7
+  json_annotation: ^4.8.1
+  flutter_svg: ^2.0.9
+  path: ^1.8.3
+  event_hub: ^0.2.1
+  rxdart: ^0.27.7
+  flutter_riverpod: ^2.4.9
+  riverpod_annotation: ^2.3.3
+
+dev_dependencies:
+  flutter_test:
+    sdk: flutter
+  freezed: ^2.4.5
+  flutter_lints: ^3.0.1
+  drift_dev: ^2.13.2
+  json_serializable: ^6.7.1
+  mockito: ^5.4.3
+  riverpod_lint: ^2.3.7
+  riverpod_generator: ^2.3.9
+
+flutter:
+  uses-material-design: true
+  assets:
+    - assets/유반.png
+    - .env

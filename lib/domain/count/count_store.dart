@@ -10,15 +10,15 @@ class CountStore {
   final CountRepository _repository;
   final ProviderRef<CountStore> _ref;
 
-  void increase(CountDto countDto) async {
-    CountState countState = _ref.watch(countStateProvider);
-    countState.copyWith(
+  Future<void> increase(CountDto countDto) async {
+    CountState countState = _ref.read(countStateProvider);
+    countState = countState.copyWith(
         countDto: countDto.copyWith(number: countDto.number + 1));
 
     await _repository.increase(countDto.id!);
   }
 
-  void decrease(CountDto countDto) async {
+  Future<void> decrease(CountDto countDto) async {
     if (countDto.number == 0) return;
 
     CountState countState = _ref.watch(countStateProvider);

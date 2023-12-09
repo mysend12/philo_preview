@@ -31,7 +31,10 @@ class HomeView extends ConsumerWidget {
         ),
       ),
       floatingActionButton: FloatingActionButton(
-        onPressed: () => store.increase(state.countDto),
+        onPressed: () {
+          store.increase(ref.read(countStateProvider).countDto).whenComplete(
+              () => store.increase(ref.read(countStateProvider).countDto));
+        },
         tooltip: 'Increment',
         child: const Icon(Icons.add),
       ), // This trailing comma makes auto-formatting nicer for build methods.

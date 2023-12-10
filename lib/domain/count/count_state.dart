@@ -1,7 +1,8 @@
 import 'package:flutter_riverpod/flutter_riverpod.dart';
 import 'package:freezed_annotation/freezed_annotation.dart';
 
-import '../dto/count_dto.dart';
+import 'dto/count_dto.dart';
+
 
 @freezed
 class CountState {

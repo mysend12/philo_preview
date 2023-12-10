@@ -1,8 +1,9 @@
 import 'package:philo/common/dependency_injection.dart';
 import 'package:philo/data/database/count/repository/count_repository.dart';
 import 'package:philo/domain/count/count_state.dart';
-import 'package:philo/domain/dto/count_dto.dart';
 import 'package:riverpod_annotation/riverpod_annotation.dart';
+
+import 'dto/count_dto.dart';
 
 class CountStore {
   CountStore(this._repository, this._ref);

@@ -6,9 +6,9 @@ import 'package:philo/data/database/database_open_connector_impl.dart'
     if (dart.library.io) 'package:philo/data/database/native_database_open_connector.dart'
     if (dart.library.html) 'package:philo/data/database/web_database_open_connector.dart';
 import 'package:philo/domain/count/count_store.dart';
-import 'package:philo/domain/dto/count_dto.dart';
 
 import '../domain/count/count_state.dart';
+import '../domain/count/dto/count_dto.dart';
 
 late final Provider<QueryExecutor> queryExecutorProvider;
 late final Provider<CountRepository> countRepositoryProvider;
